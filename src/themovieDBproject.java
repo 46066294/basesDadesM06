@@ -13,7 +13,12 @@ import java.net.*;
 
 public class themovieDBproject {
 
-
+    /**
+     * Retorna el JSON de la pelicula
+     * @param urlToRead
+     * @return
+     * @throws Exception
+     */
     public static String getHTML(String urlToRead) throws Exception {
         StringBuilder result = new StringBuilder();
         URL url = new URL(urlToRead);
@@ -60,6 +65,10 @@ public class themovieDBproject {
 
     }
 
+    /**
+     * Escriu la pelicula i la data de publicacio
+     * @param cadena
+     */
     public static void SJS (String cadena){//para pelis
 
         Object obj02 =JSONValue.parse(cadena);
@@ -69,6 +78,10 @@ public class themovieDBproject {
 
     }
 
+    /**
+     * Escriu tots els personatges
+     * @param cadena
+     */
     public static void SJCpersonaje (String cadena){//para personajes
         Object obj02 =JSONValue.parse(cadena);
         JSONObject arra02=(JSONObject)obj02;
